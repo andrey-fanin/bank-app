@@ -1,0 +1,34 @@
+{
+  "name": "bank-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://gitname.github.io/bank-app",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "predeploy": "tsc && vite build",
+    "deploy": "gh-pages -d build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.10",
+    "@chakra-ui/react": "^2.3.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@tanstack/react-query": "^4.9.0",
+    "axios": "^0.27.2",
+    "framer-motion": "^6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.36.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "prettier": "2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  color: white;
+}
+
+.alert-custom {
+  animation: zoomIn .4s alternate;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.4);
+    opacity: 0.2;
+  }
+
+  90% {
+    transform: scale(1.15);
+    opacity: .9;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}

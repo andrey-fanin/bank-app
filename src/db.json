@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "balance": 2597,
+      "card": 2312231223122312
+    },
+    {
+      "id": 2,
+      "name": "Jimmy Neutron",
+      "balance": 278,
+      "card": 1111111111111111
+    },
+    {
+      "id": 3,
+      "name": "Cris OnePiece",
+      "balance": 25001,
+      "card": 9312291223922912
+    }
+  ]
+}
