@@ -1,0 +1,1 @@
+body{color:#fff}.alert-custom{animation:zoomIn .4s alternate}@keyframes zoomIn{0%{transform:scale(.4);opacity:.2}90%{transform:scale(1.15);opacity:.9}to{transform:scale(1);opacity:1}}
