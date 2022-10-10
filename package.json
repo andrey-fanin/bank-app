@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gitname.github.io/bank-app",
+  "homepage": "https://andrey-fanin.github.io/bank-app/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "tsc && vite build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "@tanstack/react-query": "^4.9.0",
     "axios": "^0.27.2",
     "framer-motion": "^6",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.36.1"

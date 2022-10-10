@@ -3,13 +3,13 @@
     {
       "id": 1,
       "name": "John Smith",
-      "balance": 2597,
+      "balance": 11000,
       "card": 2312231223122312
     },
     {
       "id": 2,
       "name": "Jimmy Neutron",
-      "balance": 278,
+      "balance": 5000,
       "card": 1111111111111111
     },
     {

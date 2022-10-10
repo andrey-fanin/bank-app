@@ -15,7 +15,9 @@ const Home: FC = () => {
 				<Text fontSize="xl" color="whiteAlpha.500">
 					Good morning!
 				</Text>
-				<Heading fontSize="2xl">{user?.name}</Heading>
+				<Heading fontSize="2xl">
+					{user?.name || 'please, use local database to test this app'}
+				</Heading>
 			</Box>
 			<Balance />
 

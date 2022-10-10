@@ -9,7 +9,7 @@ export interface ITransferMoney {
 
 export const UserService = {
 	async getProfile() {
-		const responce = await instance.get<IUser>('/users/1')
+		const responce = await instance.get<IUser>('/users/2')
 		return responce.data
 	},
 
@@ -31,12 +31,14 @@ export const UserService = {
 		const userFrom = await this.getUserByCard(fromCard)
 		const userTo = await this.getUserByCard(card)
 
-		await instance.patch(`/users/${userFrom.id}`, {
-			balance: userFrom.balance - amount
-		})
+		if (userFrom && userTo) {
+			await instance.patch(`/users/${userFrom.id}`, {
+				balance: userFrom.balance - amount
+			})
 
-		await instance.patch(`/users/${userTo.id}`, {
-			balance: userTo.balance + amount
-		})
+			await instance.patch(`/users/${userTo.id}`, {
+				balance: userTo.balance + amount
+			})
+		}
 	}
 }

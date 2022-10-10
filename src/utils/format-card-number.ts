@@ -6,4 +6,6 @@ export const formatCardNumber = (value: number) => {
 		[$1, $2, $3, $4].filter(group => !!group).join(' ')
 	)
 }
-//2:38
+export const getNumberFromCard = (value: number) => {
+	return Number((value || '').toString().replace(/ /g, ''))
+}

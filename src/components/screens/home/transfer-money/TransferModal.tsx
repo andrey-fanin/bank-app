@@ -15,7 +15,10 @@ import {
 	ModalOverlay,
 	Stack
 } from '@chakra-ui/react'
-import { formatCardNumber } from '../../../../utils/format-card-number'
+import {
+	formatCardNumber,
+	getNumberFromCard
+} from '../../../../utils/format-card-number'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { ITransferData } from './transfer.interface'
 import { useProfile } from '../../../../hooks/useProfile'
@@ -66,12 +69,16 @@ const TransferModal: FC<ITransferModal> = ({ isOpen, onClose }) => {
 	const onSubmit: SubmitHandler<ITransferData> = data => {
 		if (!user?.card) return
 		mutate({
-			card: data.card,
+			card: getNumberFromCard(data.card),
 			amount: Number(data.amount),
 			fromCard: user.card
 		})
 	}
 
+	// @ts-ignore
+	// @ts-ignore
+	// @ts-ignore
+	// @ts-ignore
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -103,6 +110,7 @@ const TransferModal: FC<ITransferModal> = ({ isOpen, onClose }) => {
 											id={name}
 											size="md"
 											placeholder="To card"
+											type="tel"
 											value={formatCardNumber(value)}
 											onChange={e => onChange(e.target.value)}
 											maxLength={19}
@@ -132,7 +140,6 @@ const TransferModal: FC<ITransferModal> = ({ isOpen, onClose }) => {
 										required: 'This is required'
 									})}
 								/>
-								{/*<InputRightElement children={<CheckIcon color="green.500" />} />*/}
 							</InputGroup>
 							<Button
 								colorScheme="green"
